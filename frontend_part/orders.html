@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">My E-Commerce</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="user.html">My Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="edit.html">Edit Personal Info</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="orders.html">Order History</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Order History -->
+<div class="container mt-5 text-center">
+  <div class="card shadow-lg" id="card-custom">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Your Order History</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td>Product A</td>
+            <td>Shipped</td>
+            <td>2024-12-01</td>
+          </tr>
+          <tr>
+            <td>#002</td>
+            <td>Product B</td>
+            <td>Delivered</td>
+            <td>2024-12-02</td>
+          </tr>
+          <!-- More orders -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-white py-3" id="footer-custom">
+  <p class="mb-0">© 2024 My E-Commerce. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

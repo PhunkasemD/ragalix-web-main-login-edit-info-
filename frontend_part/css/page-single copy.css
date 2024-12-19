@@ -1,0 +1,374 @@
+
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c889a;
+    --grey-color: #687080;
+    --bordoer-color: #e5e8ec;
+    --dark-color: #212121;
+
+    --prim-font: 'Ubuntu', sans-serif;
+
+    --font-small:13px;
+    --fs14: 14px;
+    --font-smaller: 11px;
+  
+    --percent100: 100%;
+    --percent50: 50%;
+  
+    --fw2: 200;
+    --fw3: 300;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
+  
+    --trans-background-color: background-color .3s, color .3s;
+    --trans-background: background-color .3s;
+    --trans-color: color .3s;
+    --trans-border: border .3s;
+    --trans-transform: transform .3s;
+  
+    --shadow: 0px 10px 20px 0px rgb(0 0 0 /20%);
+    --fade: fade-bottom .3s cubic-bezier(0.39, 0.575, .0565, 1) both;
+
+}
+
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon__chevron-down:before {
+    content: "\f109";
+}
+/* --------------------------*
+        #breadcrumb
+* ------------------------- */
+.breadcrumb {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    flex-direction: row;
+    align-items: center;
+}
+
+[data-department=men] .breadcrumb, 
+[data-department~=default] .breadcrumb.forcemw, 
+[data-department=default] .forcemw .breadcrumb {
+    font-family: "RobotoMono-Regular";
+    font-size: .69rem;
+    line-height: 0;
+    letter-spacing: 0;
+    color: #000;
+}
+.breadcrumb__item:first-child .breadcrumb__item__link {
+    padding-left: 0;
+}
+[data-department=men] .breadcrumb__item__link, 
+[data-department~=default] .breadcrumb__item__link.forcemw, 
+[data-department=default] .forcemw .breadcrumb__item__link {
+    color: #000;
+}
+.breadcrumb__item__link {
+    padding: 0 5px;
+}
+.breadcrumb__item:after {
+    content: "/";
+}
+  
+/* --------------------------*
+       #Product
+* ------------------------- */
+.product {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    padding: 0 23px;
+    flex-direction: column;
+}
+.product__area:nth-child(1) {
+    padding: 0;
+}
+.product__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.product .breadcrumb {
+    display: none;
+}
+
+[data-department=men] .product__area__information, 
+[data-department~=default] .product__area__information.forcemw, 
+[data-department=default] .forcemw .product__area__information {
+    max-width: 416px;
+}
+.product__area__information {
+    order: 2;
+}
+.product__area__gallery, 
+.product__area__information {
+    width: 100%;
+}
+.product__area__branding {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.product__area__branding>h1 {
+    font-weight: unset;
+}
+
+[data-department=men] .product__area__branding__designer, 
+[data-department~=default] .product__area__branding__designer.forcemw, 
+[data-department=default] .forcemw .product__area__branding__designer {
+    font-family: "FuturaStd-Medium";
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: -.06rem;
+}
+.product__area__branding__designer a {
+    color: #000;
+}
+
+[data-department=men] .product__area__branding__name, 
+[data-department~=default] .product__area__branding__name.forcemw, 
+[data-department=default] .forcemw .product__area__branding__name {
+    font-family: "RobotoMono-Regular";
+    font-size: .75rem;
+    line-height: 130%;
+    letter-spacing: 0;
+}
+
+.productinfo__block {
+    display: block;
+}
+.productinfo__price {
+    margin-top: 5px;
+}
+.pricing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.pricing__prices {
+    display: flex;
+    flex-direction: row;
+}
+.pricing__prices__wrapper {
+    display: flex;
+    align-self: auto;
+    white-space: nowrap;
+}
+[data-department=men] .pricing__info, 
+[data-department~=default] .pricing__info.forcemw,
+[data-department=default] .forcemw .pricing__info {
+    text-align: left;
+}
+.pricing__info {
+    display: flex;
+}
+[data-department=men] .productinfo__pricedescription, 
+[data-department~=default] .productinfo__pricedescription.forcemw, 
+[data-department=default] .forcemw .productinfo__pricedescription {
+    font-family: "RobotoMono-Regular";
+    font-size: .69rem;
+    line-height: 130%;
+    letter-spacing: 0;
+}
+[data-department=men] .productinfo__pricedescription, 
+[data-department~=default] .productinfo__pricedescription.forcemw, 
+[data-department=default] .forcemw .productinfo__pricedescription, 
+[data-department=men] .productinfo__contact-us, 
+[data-department~=default] .productinfo__contact-us.forcemw, 
+[data-department=default] .forcemw .productinfo__contact-us {
+    font-family: "RobotoMono-Regular";
+    font-size: .56rem;
+    line-height: 130%;
+    letter-spacing: 0;
+}
+.productinfo__name, .productinfo__pricedescription, 
+.productinfo__extradiscount {
+    margin-top: 5px;
+}
+.productinfo__pricedescription, 
+.productinfo__contact-us {
+    margin-bottom: 10px;
+    color: #757575;
+}
+.pricing__prices__wrapper {
+    display: flex;
+    align-self: auto;
+    white-space: nowrap;
+}
+[data-department=men] .pricing__prices__value--original, 
+[data-department~=default] .pricing__prices__value--original.forcemw, 
+[data-department=default] .forcemw .pricing__prices__value--original, 
+[data-department=men] .pricing__prices__value--discount, 
+[data-department~=default] .pricing__prices__value--discount.forcemw, 
+[data-department=default] .forcemw .pricing__prices__value--discount {
+    font-family: "FuturaStd-Medium";
+    font-size: .88rem;
+    line-height: 130%;
+    letter-spacing: 0;
+}
+.pricing__prices__value {
+    display: flex;
+    flex-direction: row;
+}
+.pricing__prices__price {
+    text-transform: uppercase;
+}
+
+@media (min-width: 481px) {
+ 
+}
+
+@media (min-width: 600px) {
+    .product {
+        padding: 0 23px;
+    }
+    .product__breadcrumb {
+        margin-top: 10px;
+    }
+    .product__area:nth-child(2) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    [data-department=men] .product__area__information, 
+    [data-department~=default] .product__area__information.forcemw, 
+    [data-department=default] .forcemw .product__area__information {
+        padding-left: 1px;
+    }
+    .product__area__information {
+        max-width: 50%;
+    }
+    .product__area__branding {
+        margin-top: 0;
+    }
+    [data-department=men] .product__area__branding__designer, 
+    [data-department~=default] .product__area__branding__designer.forcemw, 
+    [data-department=default] .forcemw .product__area__branding__designer {
+        font-size: 1.56rem;
+    }
+    [data-department=men] .product__area__branding__name, 
+    [data-department~=default] .product__area__branding__name.forcemw, 
+    [data-department=default] .forcemw .product__area__branding__name {
+        display: block;
+    }
+    .productinfo__price {
+        margin-top: 15px;
+    }
+    [data-department=men] .productinfo__pricedescription, 
+    [data-department~=default] .productinfo__pricedescription.forcemw, 
+    [data-department=default] .forcemw .productinfo__pricedescription, 
+    [data-department=men] .productinfo__contact-us, 
+    [data-department~=default] .productinfo__contact-us.forcemw, 
+    [data-department=default] .forcemw .productinfo__contact-us {
+        margin: initial;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    [data-department=men] .productinfo__pricedescription, 
+    [data-department~=default] .productinfo__pricedescription.forcemw, 
+    [data-department=default] .forcemw .productinfo__pricedescription,
+    [data-department=men] .productinfo__contact-us, 
+    [data-department~=default] .productinfo__contact-us.forcemw, 
+    [data-department=default] .forcemw .productinfo__contact-us {
+        font-size: .69rem;
+    }
+    .productinfo__pricedescription, 
+    .productinfo__contact-us {
+        margin-top: 15px;
+    }
+    [data-department=men] .pricing__prices__value--original, 
+    [data-department~=default] .pricing__prices__value--original.forcemw, 
+    [data-department=default] .forcemw .pricing__prices__value--original, 
+    [data-department=men] .pricing__prices__value--discount, 
+    [data-department~=default] .pricing__prices__value--discount.forcemw, 
+    [data-department=default] .forcemw .pricing__prices__value--discount {
+        font-size: 1rem;
+    }
+
+
+
+
+}
+
+@media (min-width: 768px) {
+ 
+
+
+}
+
+@media (min-width: 1024px) {
+    .product__breadcrumb {
+        margin-top: 0;
+    }
+    .product__breadcrumb .breadcrumb {
+        display: flex;
+    }
+    [data-department=men] .product__area__branding__designer, 
+    [data-department~=default] .product__area__branding__designer.forcemw, 
+    [data-department=default] .forcemw .product__area__branding__designer {
+        font-size: 1.88rem;
+    }
+    [data-department=men] .productinfo, 
+    [data-department~=default] .productinfo.forcemw, 
+    [data-department=default] .forcemw .productinfo {
+        max-width: 304px;
+    }
+
+
+}
+
+@media (min-width: 1140px) {
+    .product {
+        padding: 0 30px;
+    }
+    .product__area:nth-child(1) {
+        display: block;
+    }
+    .product__area__information {
+        margin-right: 117px;
+        max-width: 443px;
+    }
+    [data-department=men] .productinfo, 
+    [data-department~=default] .productinfo.forcemw, 
+    [data-department=default] .forcemw .productinfo {
+        max-width: unset;
+    }
+}
+
+@media (min-width: 1440px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+
+
+
+@media (min-width: 1200px){
+
+  
+
+
+}
+
