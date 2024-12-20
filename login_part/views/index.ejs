@@ -223,12 +223,19 @@
                                     </a>
                                 </li>
 
-                                
-                                <li><a href="user.html">
-                                    <div class="icon-small"><i class="fal fa-user end-icon"></i></div>
-                                    </a>
-                                </li>
-
+                                <li>
+                                    <% if (user) { %>
+                                      <a href="/user/view/<%= user._id %>">
+                                        <div class="icon-small"><i class="fal fa-user end-icon"></i></div>
+                                      </a>
+                                    <% } else { %>
+                                      <a href="/login">
+                                        <div class="icon-small"><i class="fal fa-user end-icon"></i></div>
+                                      </a>
+                                    <% } %>
+                                  </li>
+                                  
+                                  
                                 
                             </ul>
                         </div>

@@ -1,12 +1,21 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
+
+    fullName: {
+        type: String, 
+        required: false // ตั้งค่าเป็น `false` หากไม่บังคับให้กรอก
+    },
     email: {
         type: String,
         required: [true, 'Please enter an email'],
         unique: true,
         lowercase: true
+    },
+    phone: {
+        type: String,
+        required: false // ไม่บังคับให้กรอก
     },
     password: {
         type: String,
@@ -14,6 +23,7 @@ const userSchema = new mongoose.Schema({
         minlength: [6, 'Minimum password length is 6 characters']
     }
 });
+
 
 // Hash passwords before saving
 userSchema.pre('save', async function (next) {
