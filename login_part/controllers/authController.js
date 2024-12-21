@@ -88,11 +88,26 @@ router.post('/login', async (req, res) => {
 });
 
 
-
 router.get('/logout', (req, res) => {
-    res.cookie('userId', '', { maxAge: 1 }); // ลบ Cookie
-    res.redirect('/login');
+    const token = req.cookies.jwt;
+
+    if (!token) {
+        console.log('No token found, redirecting to login');
+        return res.redirect('/login');
+    }
+
+    try {
+        jwt.verify(token, process.env.JWT_SECRET || 'your_secure_secret');
+        console.log('Token valid, logging out');
+    } catch (err) {
+        console.log('Invalid token during logout:', err.message);
+    }
+
+    res.cookie('jwt', '', { maxAge: 1 }); // ลบ Cookie
+    res.redirect('/login'); // redirect ไปหน้า login
 });
+
+
 
 
 // Export the router

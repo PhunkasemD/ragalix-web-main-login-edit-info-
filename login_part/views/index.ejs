@@ -121,7 +121,19 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <div class="right d-flex justify-content-end align-items-center" style="margin-left: auto;">
+                            <a class="link-secondary" href="#" aria-label="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"></svg>
+                            </a>
                             
+                            <% if (user) { %>
+                                <a class="btn btn-sm btn-danger ml-3" href="/logout">Logout</a>
+                            <% } else { %>
+                                <a class="btn btn-sm btn-outline-secondary mx-3" href="/login">Sign In</a>
+                                <a class="btn btn-sm btn-success" href="/register">Sign Up</a>
+                            <% } %>
+                        </div>
                          
                     </div>
                 </div>
